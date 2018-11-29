@@ -1,0 +1,23 @@
+$back-color_white: #f6c491
+$back-color_black: #b6673c
+$cell-size: 75px
+table
+  border-spacing: 0
+td
+  width: $cell-size
+  height: $cell-size
+  margin: 0
+  padding: 0
+  text-align: center
+  font-size: $cell-size/1.5
+#board
+  tr:nth-child(2n+1)
+    td:nth-child(2n+1)
+      background: $back-color_white
+    td:nth-child(2n)
+      background: $back-color_black
+  tr:nth-child(2n)
+    td:nth-child(2n)
+      background: $back-color_white
+    td:nth-child(2n+1)
+      background: $back-color_black
