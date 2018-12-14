@@ -1,0 +1,11 @@
+<div class="profile">
+
+  <%= image_tag (@player.image_src.to_s.empty? ? "players_images/user.png" : @player.image_src), class: "profile_avatar"%>
+  <div>
+      <h3><%= "name: #{@player.name}"%></h3>
+      <h3><%= "lastname: #{@player.lastname}"%></h3>
+      <h3><%= @player.birth_year.to_s.empty? ? nil :"birth year: #{@player.birth_year}"%></h3>
+      <h3><%=@player.death_year.to_s.empty? ? nil : "death year: #{@player.death_year}"%></h3>
+  </div>
+
+</div>

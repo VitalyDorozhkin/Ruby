@@ -1,0 +1,29 @@
+
+<% content_for(:title) {"Champions Page"}%>
+<div class="players ">
+  <h3>Champions:</h3>
+  <% @players.each do |p| %>
+    <h4 class="block_with_hide">
+      <%= image_tag (p.image_src.to_s.empty? ? "players_images/user.png" : p.image_src), class: "list_avatar" %>
+      <%= link_to p.name + " " + p.lastname, player_path(p.id)%>
+      <div class="hide">
+        <%=if p.birth_year
+             "(#{p.birth_year}#{p.death_year ? "-":""}#{p.death_year})"
+           end%>
+      </div>
+
+    </h4>
+  <% end %>
+</div>
+
+
+<form action="/form" class="static">
+  <h2>Add new player</h2>
+  <input type="text" name="name" placeholder= "name">
+  <input type="text" name="lastname" placeholder= "lastname">
+  <input type="text" name="birth_year" placeholder= "birth year">
+  <input type="text" name="death_year" placeholder= "death year">
+  <input type="text" name="image_src" placeholder= "image">
+
+  <input type="submit">
+</form>
