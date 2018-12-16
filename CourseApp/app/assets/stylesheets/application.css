@@ -1,0 +1,113 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
+@import url("https://fonts.googleapis.com/css?family=Lato:300,300i,400,400i,700,700i,900,900i");
+.container{
+    margin:auto;
+    width: 80vw;
+}
+ol, ul {
+    list-style: none;
+}
+body{
+    color:#222222;
+    font-family: Lato, sans-serif;
+    font-size: 2vw;
+}
+a:hover{
+    color: #808080;
+}
+
+.menu{
+    text-transform: uppercase;
+    margin: 1.5vw auto;
+    width: 50vw;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.hide{
+    display: none;
+    right: 2vw;
+
+}
+.block_with_hide{
+    width: 35vw;
+    border:0.3vw solid deepskyblue;
+    border-radius: 1vw;
+    margin-bottom: 1vw;
+}
+.block_with_hide:hover .hide{
+    display: inline;
+}
+
+.flex{
+    display: flex;
+}
+form{
+    border: 0.12vw solid #a2a2a2;
+    border-radius: 1.2vw;
+    min-height: 20vw;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+    min-width: 20vw;
+    margin: auto;
+    padding: 2vw;
+}
+
+input{
+    font-size: 1.5vw;
+    padding: 0.2vw;
+    width: 20vw;
+    display: block;
+    height: 2vw;
+    border: 0.1vw solid #a9a9a9;
+}
+input[type=checkbox]{
+    width: 3vw;
+}
+input[type=submit]{
+    height: 4vw;
+}
+lable{
+    display: flex;
+    align-items: center;
+}
+.field_with_errors input{
+    border-color: red;
+}
+.alert{
+    border: 0.15vw solid #ffbbbb;
+    background: #f9d1d4;
+    color: #222222;
+    padding: 0.5vw;
+    margin: -0.05vw;
+}
+.button{
+    text-transform: uppercase;
+    font-size: 2vw;
+    padding: 0.2vw;
+    display: inline-block;
+    border: 0.125vw solid #a9a9a9;
+}
+.auto-margin{
+    width: max-content;
+    margin: auto;
+}

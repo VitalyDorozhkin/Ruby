@@ -1,0 +1,7 @@
+<h1>Courses#index</h1>
+<p>Find me in app/views/courses/index.html.erb</p>
+<% @courses.each do |c| %>
+  <h3><%=link_to c.name, course_path(c[:id])%></h3>
+  <p><%=c.price%></p>
+  <p> <%=c.online ? "ONLINE" : "OFFLINE" %></p>
+<% end %>

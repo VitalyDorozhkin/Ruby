@@ -1,0 +1,18 @@
+<h1 class="auto-margin"><%=@course.name %> Edit</h1>
+
+<div class="auto-margin">
+  <%= form_for @course, url: course_path(@course[:id]), method: :patch do |f| %>
+    <h3>ADD NEW COURSE!</h3>
+    <% if @course.errors.any? %>
+      <%@course.errors.full_messages.each do |m| %>
+        <div class="alert"><%=m%></div>
+      <%end%>
+    <%end %>
+    <lable>Name:</lable><%= f.text_field :name %>
+    <lable>Price:</lable><%= f.text_field :price %>
+    <lable>Online:<%= f.check_box :online %></lable>
+    <%= f.submit%>
+  <%end %>
+</div>
+
+git

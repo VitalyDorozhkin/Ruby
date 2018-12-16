@@ -1,0 +1,18 @@
+
+
+
+<div class="auto-margin">
+  <%= form_for @course, url: courses_path, method: :post do |f| %>
+    <h3>ADD NEW COURSE!</h3>
+    <% if @course.errors.any? %>
+      <%@course.errors.full_messages.each do |m| %>
+        <div class="alert"><%=m%></div>
+      <%end%>
+    <%end %>
+    <lable>Name:</lable><%= f.text_field :name %>
+    <lable>Price:</lable><%= f.text_field :price %>
+    <lable>Online:<%= f.check_box :online %></lable>
+    <%= f.submit "SAVE COURSE"%>
+  <%end %>
+
+</div>
